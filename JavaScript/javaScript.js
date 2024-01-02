@@ -50,13 +50,14 @@ search.addEventListener("keyup", function(){
 });
 // find button country
 var find=document.getElementById("Find");
-find.addEventListener("click",  async function(){
+find.addEventListener("click",   function(){
     if(find.value==null){
-     await getDataFromApi("cairo")    }
+      getDataFromApi("cairo") 
+       }
       else{
         
         getDataFromApi(find.value);
-        clearInput();
+        // clearInput();
 
     }
 
@@ -65,12 +66,10 @@ find.addEventListener("click",  async function(){
 });
 // Get data from api
 async function getDataFromApi(country){
-    var apiKey="b071c9f88fee4f10a89105548240101"
+    var apiKey="b071c9f88fee4f10a89105548240101";
     var response=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${country}&days=3&aqi=no&alerts=n`);
     var data= await response.json();
-    console.log(weekdays[date.getDay(data.forecast.forecastday[0].date)]);
-    console.log(weekdays[date.getDay(data.forecast.forecastday[1].date)+1]);
-    console.log(weekdays[date.getDay(data.forecast.forecastday[2].date)+2]);
+   
     displayWeather(data);
 //   country cairo =====(data.location.name).split(" ")[0]
 // condition weather current time ====data.current.condition.text
@@ -209,13 +208,13 @@ function displayFirstPage(){
 
 
 logoSecond.addEventListener("click",displayFirstPage);
+breadcrumbActive.addEventListener("click",displayFirstPage)
 
 errorAnchor.addEventListener("click",displayFirstPage);
 
-  // Check if the browser supports Geolocation
  
     // Check if the browser supports Geolocation
-    function Geolocation(){
+     function Geolocation(){
         if ("geolocation" in navigator) {
             // Use the Geolocation API to get the current position
             navigator.geolocation.getCurrentPosition(
@@ -229,12 +228,12 @@ errorAnchor.addEventListener("click",displayFirstPage);
                 var apiUrl = 'https://api.opencagedata.com/geocode/v1/json?key=' + apiKey + '&q=' + latitude + '+' + longitude;
         
                 fetch(apiUrl)
-                  .then(response => response.json())
-                  .then(data => {
+                  .then(  response => response.json())
+                  .then( async data => {
                     // Extract country information from the response
                     
                     var country = data.results[0].components.country;
-                    getDataFromApi(country)
+                     await  getDataFromApi(country)
                     
                     // Do something with the country information
       
@@ -246,32 +245,13 @@ errorAnchor.addEventListener("click",displayFirstPage);
                     console.error('Error fetching geocoding data:', error);
                   });
               },
-              function(error) {
-                // Handle any errors that occur while retrieving the position
-                switch(error.code) {
-                  case error.PERMISSION_DENIED:
-                    alert("User denied the request for Geolocation.");
-                    break;
-                  case error.POSITION_UNAVAILABLE:
-                    alert("Location information is unavailable.");
-                    break;
-                  case error.TIMEOUT:
-                    alert("The request to get user location timed out.");
-                    break;
-                  case error.UNKNOWN_ERROR:
-                    alert("An unknown error occurred.");
-                    break;
-                }
-              }
+          
             );
-          } else {
-            // Geolocation is not supported by the browser
-            alert("Geolocation is not supported by your browser.");
-          }
+          } 
       
 
     }
     
 
     Geolocation();
-    breadcrumbActive.addEventListener("click",displayFirstPage)
+    

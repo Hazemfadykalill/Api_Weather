@@ -230,6 +230,19 @@ color: #009ad8;
 
 
 }
+@media only screen and (max-width: 780px) {
+    .contact {
+        flex-direction: column
+        ;
+   
+    }
+    .contactInput{
+        flex-direction: column;
+    }
+    .contactInput  input{
+       width: 100% !important;
+    }
+  }
 textarea{
     border: #323544 2px solid;
     margin: 10px 10px 10px 0;
