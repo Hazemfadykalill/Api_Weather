@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style Cascade -->
+    <link rel="stylesheet" href="css/styleOne.css">
+    <!-- icon Web Page -->
+    <link rel="shortcut icon" href="images/iconWeather.png" type="image/x-icon">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+
+<body >
+    <!-- This model that display when click on ( news nav , live cameras nav , photo nav ) -->
+
+    <div class="modelError  justify-content-center align-items-center" id="modelError">
+      <div class=" container w-50 modelErrorCaption rounded-3" id="modelErrorCaption">
+        <h4 class="fw-bold">Page Not Found</h4>
+        <p class="text-capitalize lead">Look Like You Are Followed a broken link or entered<br> a URL that does not exist on this site  </p>
+        <ul>
+          <li> <i class="fa-solid fa-angle-left me-2"></i><a id="errorAnchor" >Back to our site</a></li>
+        </ul>
+        <hr>
+        <p class="text-capitalize lead">if this is your site , and you were are not expecting a 404 <br> for this path , please visit netify is " <a href="">page not found support guid</a> for troubleShooting tips  </p>
+
+
+    
+
+
+
+      </div>
+
+    </div>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg  py-4">
+        <div class="container my-2">
+            <div class="logo  text-white  "id="logoFirst">
+                <a class="navbar-brand" href="#">
+                    <img src="images/bodyImage/logo.png" alt="Logo" width="70" height="40" class="d-inline-block align-text-top">
+                  </a>
+                  <div class="logoContent">
+                    <h1 class="fs-4 fw-bold">Weather</h1>
+                    <small>tagline goes here</small>
+                  </div>
+            </div>
+            <div class="logo  text-white  "id="logoSecond">
+              <a class="navbar-brand" href="#">
+                  <img src="images/bodyImage/logo.png" alt="Logo" width="70" height="40" class="d-inline-block align-text-top">
+                </a>
+                <div class="logoContent">
+                  <h1 class="fs-4 fw-bold">Company Name</h1>
+                  <small>tagline goes here</small>
+                </div>
+          </div>
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"  id="Active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="News">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="LiveCameras">Live Cameras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="Photos">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  class="contatA" id="contatA">Contact</a>
+              </li>
+             
+            </ul>
+          
+          </div>
+        </div>
+    </nav>
+      <!-- home Section -->
+<section id="hhhhhhhhhh" >
+        
+  <div id="home" class="home py-5 position-relative">
+   
+  
+
+    <!-- BreadCrumb -->
+    <div class="container  text-white Bread rounded-pill" id="breadCrumb">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbActive">Home</li>
+          <li class="breadcrumb-item"><a >Contact</a></li>
+         
+          
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Input Search -->
+      <div class="container  mt-5 mb-5  position-relative" id="inputFirstPage">
+        
+        <input type="text"  class="w-100 rounded-pill py-3 px-3" id="search" placeholder="Find Your Location..."  >
+        <button id="Find"  class="rounded-pill border-0 position-absolute" >Find</button>
+        
+    
+    </div>
+    <!-- second Page -->
+    <div class="container bg-transparent" id="ContactPage">
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="right rounded-4  px-3 ">
+            <div class="rContent mb-2">
+              <div class="location d-flex mb-3">
+                <i class="fa-solid fa-magnifying-glass-location me-3"></i>
+                <h6>Company Name INC.<br/>2803 Avenue Street, Los Angeles</h6>
+  
+              </div>
+              <div class="contact d-flex">
+                <div class="location me-3 d-flex">
+                  <i class="fa-solid fa-envelope me-3"></i>
+                  <a href="mailto:contact@companyname.com" >contact@companyname.com</a>
+    
+                </div> 
+                <div class="location d-flex">
+                  <i class="fa-brands fa-phoenix-framework me-3"></i>
+                  <a href="tel:+1 800 314 235">+1 800 314 235</a>
+    
+                </div>
+  
+              </div>
+            </div>
+          
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+        <div class="left text-white">
+          <h1>Contact Us</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi recusandae porro possimus, doloribus quibusdam libero dolorem, sit sed similique maiores quidem vel perferendis. Expedita aperiam aliquam in aut id voluptate!</p>
+        
+          <div class="contactInput d-flex">
+            <input type="text" placeholder="Your Name" class=" w-50 rounded-pill p-2 bg-transparent">
+            <input type="text" placeholder="Your Name" class=" w-50 rounded-pill p-2 bg-transparent">
+          </div>
+          <div class="contactInput d-flex">
+            <input type="text" placeholder="Your Name" class=" w-50 rounded-pill p-2 bg-transparent">
+            <input type="text" placeholder="Your Name" class=" w-50 rounded-pill p-2 bg-transparent">
+            
+          </div>
+          <textarea name="" id="textArea" cols="30" rows="10" placeholder="Message" class="w-100 rounded-5 p-3 bg-transparent"></textarea>
+          <div class="button text-end">
+            <button class="text-white submit">submit</button>
+          </div>
+
+        </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!--  End second Page -->
+    <!-- first Page -->
+    <div class="container mt-3 " id="FirstPage">
+      <div class="row g-0" id="forecast">
+        
+      </div>
+    </div>
+    <!-- End Section Page -->
+    <!-- Footer Section -->
+    <footer id="footers" class="footers">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="foo mb-3">
+              <div class="inputFoot position-relative">
+                <input type="text" class="w-100 rounded-pill py-2 px-3" id="subscribeEmail" placeholder="Find Your Location...">
+                <input type="button"  id="subscribe" value="subscribe" class="rounded-pill border-0 position-absolute ">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="iconsFoot d-flex ">
+              <div class="iconFoot d-flex justify-content-center align-items-center">
+                <a target="_blank" href="https://www.facebook.com/">                <i  class="fa-brands fa-facebook-f"></i>
+                </a>
+              </div>
+              <div class="iconFoot d-flex justify-content-center align-items-center">
+                <a target="_blank" href="https://www.google.com/"><i class="fa-brands fa-google-plus-g"></i></a>
+                
+              </div>
+              <div class="iconFoot d-flex justify-content-center align-items-center">
+                <a target="_blank" href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a></div>
+              <div class="iconFoot d-flex justify-content-center align-items-center">
+                <a target="_blank" href="https://www.behance.com/">                <i class="fa-brands fa-behance"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="footerBB text-white mt-2">
+          <p>Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  <!-- End Footer Section -->
+     
+  </div>
+
+</section>
+
+      
+
+
+<!-- Java Script to Project -->
+<script src="JavaScript/javaScript.js"></script>
+<!-- java script to bootstrap -->
+<script src="JavaScript/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
