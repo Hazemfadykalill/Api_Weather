@@ -242,6 +242,10 @@ color: #009ad8;
     .contactInput  input{
        width: 100% !important;
     }
+    .modelErrorCaption{
+        width: 80% !important;
+        margin: auto !important;
+    }
   }
 textarea{
     border: #323544 2px solid;

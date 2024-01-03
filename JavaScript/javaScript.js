@@ -214,7 +214,7 @@ errorAnchor.addEventListener("click",displayFirstPage);
 
  
     // Check if the browser supports Geolocation
-     function Geolocation(){
+      function Geolocation(){
         if ("geolocation" in navigator) {
             // Use the Geolocation API to get the current position
             navigator.geolocation.getCurrentPosition(
@@ -228,7 +228,7 @@ errorAnchor.addEventListener("click",displayFirstPage);
                 var apiUrl = 'https://api.opencagedata.com/geocode/v1/json?key=' + apiKey + '&q=' + latitude + '+' + longitude;
         
                 fetch(apiUrl)
-                  .then(  response => response.json())
+                  .then(   response => response.json())
                   .then( async data => {
                     // Extract country information from the response
                     
