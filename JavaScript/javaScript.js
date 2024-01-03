@@ -67,7 +67,7 @@ find.addEventListener("click",   function(){
 // Get data from api
 async function getDataFromApi(country){
     var apiKey="b071c9f88fee4f10a89105548240101";
-    var response=await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${country}&days=3&aqi=no&alerts=n`);
+    var response=await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${country}&days=3&aqi=no&alerts=n`);
     var data= await response.json();
    
     displayWeather(data);
@@ -126,7 +126,7 @@ function displayWeather(data){
               <div class="image my-3" id="imageSecondDay">
                 <img src="https:${data.forecast.forecastday[1].day.condition.icon}" alt="">
               </div>
-              <h5 class="fw-bold">${data.forecast.forecastday[1].day.mintemp_c} <sup>0</sup> c</h5>
+              <h4 class="fw-bold">${data.forecast.forecastday[1].day.mintemp_c} <sup>0</sup> c</h4>
               <h6 class="">${data.forecast.forecastday[1].day.maxtemp_f} <sup>0</sup> c</h6>
               <div class="weatherState mt-3" id="weatherState">
                 <h5 class="fs-6">${data.forecast.forecastday[1].day.condition.text}</h5>
